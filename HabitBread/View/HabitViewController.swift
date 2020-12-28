@@ -26,14 +26,25 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
- 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // detailViewController한테 데이터를 전달한다-> Habit 모델을 전달하면 될듯
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? HabitDetailViewController
+            
+            if let index = sender as? Int {
+                vc?.name = nameList[index]
+                vc?.bounty = bountyList[index]
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 }
 
