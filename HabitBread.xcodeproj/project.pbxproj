@@ -21,6 +21,9 @@
 		E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20BD259A154100979696 /* HabitDetailViewController.swift */; };
 		E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CB259B04FC00979696 /* ModificationViewController.swift */; };
 		E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CE259B06FE00979696 /* AccountViewController.swift */; };
+		E1CA20D2259B094000979696 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D1259B094000979696 /* CreationViewController.swift */; };
+		E1CA20D6259B0AB800979696 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */; };
+		E1CA20DA259B0B2100979696 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		E1CA20BD259A154100979696 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		E1CA20CB259B04FC00979696 /* ModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationViewController.swift; sourceTree = "<group>"; };
 		E1CA20CE259B06FE00979696 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		E1CA20D1259B094000979696 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
+		E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +117,14 @@
 		E1CA20A6259877CA00979696 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1CA20D8259B0B1300979696 /* Profile */,
+				E1CA20D4259B0A9D00979696 /* Settings */,
 				E1CA20AB2598783100979696 /* SignInViewController.swift */,
 				E1CA20AF25987A6100979696 /* HabitViewController.swift */,
 				E1CA20BD259A154100979696 /* HabitDetailViewController.swift */,
 				E1CA20CB259B04FC00979696 /* ModificationViewController.swift */,
 				E1CA20CE259B06FE00979696 /* AccountViewController.swift */,
+				E1CA20D1259B094000979696 /* CreationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +151,22 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E1CA20D4259B0A9D00979696 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E1CA20D8259B0B1300979696 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +268,12 @@
 			files = (
 				E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,
+				E1CA20D6259B0AB800979696 /* SettingsNavigationController.swift in Sources */,
 				E1CA20A4259841DF00979696 /* Const.swift in Sources */,
 				E1CA208F2598415300979696 /* AppDelegate.swift in Sources */,
 				E1CA20B025987A6100979696 /* HabitViewController.swift in Sources */,
+				E1CA20D2259B094000979696 /* CreationViewController.swift in Sources */,
+				E1CA20DA259B0B2100979696 /* ProfileNavigationController.swift in Sources */,
 				E1CA20AC2598783100979696 /* SignInViewController.swift in Sources */,
 				E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */,
 				E1CA20912598415300979696 /* SceneDelegate.swift in Sources */,
