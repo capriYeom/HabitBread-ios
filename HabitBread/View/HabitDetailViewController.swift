@@ -25,8 +25,7 @@ class HabitDetailViewController: UIViewController {
             bountyLabel.text = "\(bounty)"
         }
     }
-    
-    @IBAction func close(_ sender: Any) {
+    @IBAction func closeController(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }

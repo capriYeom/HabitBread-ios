@@ -19,6 +19,8 @@
 		E1CA20B025987A6100979696 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20AF25987A6100979696 /* HabitViewController.swift */; };
 		E1CA20B4259880AB00979696 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20B3259880AB00979696 /* Habit.swift */; };
 		E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20BD259A154100979696 /* HabitDetailViewController.swift */; };
+		E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CB259B04FC00979696 /* ModificationViewController.swift */; };
+		E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CE259B06FE00979696 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E1CA20AF25987A6100979696 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		E1CA20B3259880AB00979696 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		E1CA20BD259A154100979696 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
+		E1CA20CB259B04FC00979696 /* ModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationViewController.swift; sourceTree = "<group>"; };
+		E1CA20CE259B06FE00979696 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		E1CA208D2598415300979696 /* HabitBread */ = {
 			isa = PBXGroup;
 			children = (
+				E1CA20C2259A2DF800979696 /* Network */,
 				E1CA20B22598809400979696 /* Model */,
 				E1CA20A7259877D500979696 /* Storyboard */,
 				E1CA20A6259877CA00979696 /* View */,
@@ -109,6 +114,8 @@
 				E1CA20AB2598783100979696 /* SignInViewController.swift */,
 				E1CA20AF25987A6100979696 /* HabitViewController.swift */,
 				E1CA20BD259A154100979696 /* HabitDetailViewController.swift */,
+				E1CA20CB259B04FC00979696 /* ModificationViewController.swift */,
+				E1CA20CE259B06FE00979696 /* AccountViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +135,13 @@
 				E1CA20B3259880AB00979696 /* Habit.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E1CA20C2259A2DF800979696 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,
 				E1CA20A4259841DF00979696 /* Const.swift in Sources */,
 				E1CA208F2598415300979696 /* AppDelegate.swift in Sources */,
@@ -234,6 +249,7 @@
 				E1CA20AC2598783100979696 /* SignInViewController.swift in Sources */,
 				E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */,
 				E1CA20912598415300979696 /* SceneDelegate.swift in Sources */,
+				E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
