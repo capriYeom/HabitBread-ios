@@ -22,8 +22,14 @@
 		E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CB259B04FC00979696 /* ModificationViewController.swift */; };
 		E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20CE259B06FE00979696 /* AccountViewController.swift */; };
 		E1CA20D2259B094000979696 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D1259B094000979696 /* CreationViewController.swift */; };
-		E1CA20D6259B0AB800979696 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */; };
+		E1CA20D6259B0AB800979696 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D5259B0AB800979696 /* SettingsViewController.swift */; };
 		E1CA20DA259B0B2100979696 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */; };
+		E1CA20DD259B279800979696 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20DC259B279800979696 /* NotificationViewController.swift */; };
+		E1CA20E1259B36E400979696 /* InvitationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20E0259B36E400979696 /* InvitationTableViewController.swift */; };
+		E1CA20E4259B42A700979696 /* HelpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20E3259B42A700979696 /* HelpTableController.swift */; };
+		E1CA20E7259B46F600979696 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20E6259B46F600979696 /* InformationTableViewController.swift */; };
+		E1CA20EB259B83B400979696 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20EA259B83B400979696 /* Color.swift */; };
+		E1CA20EF259B8BB500979696 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20EE259B8BB500979696 /* RankingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +52,14 @@
 		E1CA20CB259B04FC00979696 /* ModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationViewController.swift; sourceTree = "<group>"; };
 		E1CA20CE259B06FE00979696 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		E1CA20D1259B094000979696 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
-		E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		E1CA20D5259B0AB800979696 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		E1CA20DC259B279800979696 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E1CA20E0259B36E400979696 /* InvitationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationTableViewController.swift; sourceTree = "<group>"; };
+		E1CA20E3259B42A700979696 /* HelpTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableController.swift; sourceTree = "<group>"; };
+		E1CA20E6259B46F600979696 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
+		E1CA20EA259B83B400979696 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E1CA20EE259B8BB500979696 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 		E1CA208D2598415300979696 /* HabitBread */ = {
 			isa = PBXGroup;
 			children = (
+				E1CA20E9259B836A00979696 /* Helper */,
 				E1CA20C2259A2DF800979696 /* Network */,
 				E1CA20B22598809400979696 /* Model */,
 				E1CA20A7259877D500979696 /* Storyboard */,
@@ -125,6 +138,7 @@
 				E1CA20CB259B04FC00979696 /* ModificationViewController.swift */,
 				E1CA20CE259B06FE00979696 /* AccountViewController.swift */,
 				E1CA20D1259B094000979696 /* CreationViewController.swift */,
+				E1CA20EE259B8BB500979696 /* RankingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,7 +170,11 @@
 		E1CA20D4259B0A9D00979696 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				E1CA20D5259B0AB800979696 /* SettingsNavigationController.swift */,
+				E1CA20D5259B0AB800979696 /* SettingsViewController.swift */,
+				E1CA20DC259B279800979696 /* NotificationViewController.swift */,
+				E1CA20E0259B36E400979696 /* InvitationTableViewController.swift */,
+				E1CA20E3259B42A700979696 /* HelpTableController.swift */,
+				E1CA20E6259B46F600979696 /* InformationTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -167,6 +185,14 @@
 				E1CA20D9259B0B2100979696 /* ProfileNavigationController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		E1CA20E9259B836A00979696 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA20EA259B83B400979696 /* Color.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,16 +294,22 @@
 			files = (
 				E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,
-				E1CA20D6259B0AB800979696 /* SettingsNavigationController.swift in Sources */,
+				E1CA20D6259B0AB800979696 /* SettingsViewController.swift in Sources */,
 				E1CA20A4259841DF00979696 /* Const.swift in Sources */,
+				E1CA20EB259B83B400979696 /* Color.swift in Sources */,
 				E1CA208F2598415300979696 /* AppDelegate.swift in Sources */,
 				E1CA20B025987A6100979696 /* HabitViewController.swift in Sources */,
 				E1CA20D2259B094000979696 /* CreationViewController.swift in Sources */,
 				E1CA20DA259B0B2100979696 /* ProfileNavigationController.swift in Sources */,
 				E1CA20AC2598783100979696 /* SignInViewController.swift in Sources */,
+				E1CA20E4259B42A700979696 /* HelpTableController.swift in Sources */,
+				E1CA20DD259B279800979696 /* NotificationViewController.swift in Sources */,
+				E1CA20E1259B36E400979696 /* InvitationTableViewController.swift in Sources */,
+				E1CA20E7259B46F600979696 /* InformationTableViewController.swift in Sources */,
 				E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */,
 				E1CA20912598415300979696 /* SceneDelegate.swift in Sources */,
 				E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */,
+				E1CA20EF259B8BB500979696 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

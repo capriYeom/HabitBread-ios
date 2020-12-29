@@ -9,4 +9,8 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
+   
+    @IBAction func OpenSettings(_ sender: Any) {
+        performSegue(withIdentifier: "goToSettings", sender: nil)
+    }
 }

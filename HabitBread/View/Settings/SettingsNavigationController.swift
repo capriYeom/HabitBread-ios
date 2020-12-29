@@ -7,6 +7,6 @@
 
 import UIKit
 
-class SettingsNavigationController: UINavigationController {
+class SettingsViewController: UINavigationController {
     
 }
