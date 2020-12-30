@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0E737C8BF689FDC7BB7167D4 /* Pods_HabitBread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D64DC0BA0DA267347117EB6 /* Pods_HabitBread.framework */; };
+		E17E10F8259C7AC900957F65 /* BakeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10F7259C7AC900957F65 /* BakeryViewController.swift */; };
+		E17E10FB259C99A100957F65 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10FA259C99A100957F65 /* APIManager.swift */; };
+		E17E1103259C9D7300957F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1102259C9D7300957F65 /* Config.swift */; };
+		E17E1106259C9DF300957F65 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1105259C9DF300957F65 /* Rank.swift */; };
 		E1CA208F2598415300979696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA208E2598415300979696 /* AppDelegate.swift */; };
 		E1CA20912598415300979696 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20902598415300979696 /* SceneDelegate.swift */; };
 		E1CA20962598415300979696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1CA20942598415300979696 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 		6D64DC0BA0DA267347117EB6 /* Pods_HabitBread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitBread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EEBE0197BDEB668D1333F3 /* Pods-HabitBread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitBread.release.xcconfig"; path = "Target Support Files/Pods-HabitBread/Pods-HabitBread.release.xcconfig"; sourceTree = "<group>"; };
 		A8521FCF6859499734104F19 /* Pods-HabitBread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitBread.debug.xcconfig"; path = "Target Support Files/Pods-HabitBread/Pods-HabitBread.debug.xcconfig"; sourceTree = "<group>"; };
+		E17E10F7259C7AC900957F65 /* BakeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryViewController.swift; sourceTree = "<group>"; };
+		E17E10FA259C99A100957F65 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E17E1102259C9D7300957F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E17E1105259C9DF300957F65 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
 		E1CA208B2598415300979696 /* HabitBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CA208E2598415300979696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CA20902598415300979696 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +99,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E17E10FD259C9A8B00957F65 /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA20CE259B06FE00979696 /* AccountViewController.swift */,
+				E1CA20BD259A154100979696 /* HabitDetailViewController.swift */,
+				E1CA20AF25987A6100979696 /* HabitViewController.swift */,
+				E1CA20D1259B094000979696 /* CreationViewController.swift */,
+			);
+			path = Habit;
+			sourceTree = "<group>";
+		};
 		E1CA20822598415300979696 = {
 			isa = PBXGroup;
 			children = (
@@ -130,15 +149,13 @@
 		E1CA20A6259877CA00979696 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E17E10FD259C9A8B00957F65 /* Habit */,
 				E1CA20D8259B0B1300979696 /* Profile */,
 				E1CA20D4259B0A9D00979696 /* Settings */,
 				E1CA20AB2598783100979696 /* SignInViewController.swift */,
-				E1CA20AF25987A6100979696 /* HabitViewController.swift */,
-				E1CA20BD259A154100979696 /* HabitDetailViewController.swift */,
 				E1CA20CB259B04FC00979696 /* ModificationViewController.swift */,
-				E1CA20CE259B06FE00979696 /* AccountViewController.swift */,
-				E1CA20D1259B094000979696 /* CreationViewController.swift */,
 				E1CA20EE259B8BB500979696 /* RankingViewController.swift */,
+				E17E10F7259C7AC900957F65 /* BakeryViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CA20B3259880AB00979696 /* Habit.swift */,
+				E17E1105259C9DF300957F65 /* Rank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +181,8 @@
 		E1CA20C2259A2DF800979696 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E17E10FA259C99A100957F65 /* APIManager.swift */,
+				E17E1102259C9D7300957F65 /* Config.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,6 +226,7 @@
 				E1CA20872598415300979696 /* Sources */,
 				E1CA20882598415300979696 /* Frameworks */,
 				E1CA20892598415300979696 /* Resources */,
+				574CC7708FB0219D71A9D732 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +306,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		574CC7708FB0219D71A9D732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HabitBread/Pods-HabitBread-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HabitBread/Pods-HabitBread-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HabitBread/Pods-HabitBread-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -293,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */,
+				E17E1106259C9DF300957F65 /* Rank.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,
 				E1CA20D6259B0AB800979696 /* SettingsViewController.swift in Sources */,
 				E1CA20A4259841DF00979696 /* Const.swift in Sources */,
@@ -304,12 +343,15 @@
 				E1CA20AC2598783100979696 /* SignInViewController.swift in Sources */,
 				E1CA20E4259B42A700979696 /* HelpTableController.swift in Sources */,
 				E1CA20DD259B279800979696 /* NotificationViewController.swift in Sources */,
+				E17E10FB259C99A100957F65 /* APIManager.swift in Sources */,
 				E1CA20E1259B36E400979696 /* InvitationTableViewController.swift in Sources */,
 				E1CA20E7259B46F600979696 /* InformationTableViewController.swift in Sources */,
 				E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */,
 				E1CA20912598415300979696 /* SceneDelegate.swift in Sources */,
+				E17E1103259C9D7300957F65 /* Config.swift in Sources */,
 				E1CA20CF259B06FE00979696 /* AccountViewController.swift in Sources */,
 				E1CA20EF259B8BB500979696 /* RankingViewController.swift in Sources */,
+				E17E10F8259C7AC900957F65 /* BakeryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

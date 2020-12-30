@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Habit {
+struct Habit: Decodable {
     let habitId: Int
     let title: String
     let description: String
@@ -15,11 +15,11 @@ struct Habit {
     let commitHistory: [History]
 }
 
-struct HabitResponse {
+struct HabitResponse: Decodable {
     let comment: String
     let habits: [Habit]
 }
 
-struct History {
+struct History: Decodable {
     let createdAt: String
 }
