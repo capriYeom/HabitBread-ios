@@ -41,4 +41,16 @@ class APIManager {
             }
         })
     }
+    
+    func getAllHabits(completionHandler: @escaping (Result<HabitResponse, Error>)-> Void) {
+        self.request = AF.request("\(Config.baseURL)/habits", headers: Config.baseHeaders)
+        self.request?.responseDecodable(completionHandler: { (response: DataResponse<HabitResponse, AFError>) in
+            switch response.result {
+            case .success(let response):
+                completionHandler(.success(response))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        })
+    }
 }

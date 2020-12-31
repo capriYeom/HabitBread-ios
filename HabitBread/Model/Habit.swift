@@ -10,14 +10,14 @@ import Foundation
 struct Habit: Decodable {
     let habitId: Int
     let title: String
-    let description: String
+    let description: String?
     let dayOfWeek: String
     let commitHistory: [History]
 }
 
 struct HabitResponse: Decodable {
     let comment: String
-    let habits: [Habit]
+    let habits: [Habit]?
 }
 
 struct History: Decodable {
