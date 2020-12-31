@@ -18,5 +18,5 @@ struct RankUser: Decodable {
     let userName: String
     let exp: Int
     let achievement: Int
-    let rank: String
+    let rank: String!
 }
