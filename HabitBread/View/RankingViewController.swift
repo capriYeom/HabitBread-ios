@@ -78,11 +78,14 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func updateUI(rank: Rank) {
         rankLabel.text = "당신은 \(rank.userTotalCount)명 중에\(Int(rank.user.rank)!)등입니다."
-        
-//        let percent: floor(it.user.rank.toDouble()/it.userTotalCount*100).toInt()
         print("userRank: \(Double(rank.userTotalCount)/Double(rank.user.rank)!)" )
         let percent = 32
         myPercentageLabel.text = "\(percent)%"
+        
+        DispatchQueue.main.async {
+            self.users = rank.rankings
+            self.rankingTableView.reloadData()
+        }
     }
 }
 

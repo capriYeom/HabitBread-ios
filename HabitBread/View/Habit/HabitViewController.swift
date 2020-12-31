@@ -18,7 +18,18 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
       
     override func viewDidLoad() {
         super.viewDidLoad()
-      }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? HabitDetailViewController
+            
+            if let index = sender as? Int {
+                print(index)
+                vc?.name = animals[index]
+            }
+        }
+    }
       
     // There is just one row in every section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,6 +72,7 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.section).")
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
   }
 

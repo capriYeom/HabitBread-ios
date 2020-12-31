@@ -35,7 +35,6 @@ class APIManager {
         self.request?.responseDecodable(completionHandler: { (response: DataResponse<Rank, AFError>) in
             switch response.result {
             case .success(let rank):
-                print(rank.user)
                 completionHandler(.success(rank))
             case .failure(let error):
                 completionHandler(.failure(error))

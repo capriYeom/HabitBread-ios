@@ -9,10 +9,10 @@ import UIKit
 class HabitDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var bountyLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var name: String?
-    var bounty: Int?
+    var habitDescription: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,9 @@ class HabitDetailViewController: UIViewController {
     }
     
     private func updateUI() {
-        if let name = self.name, let bounty = self.bounty {
+        if let name = self.name, let description = self.habitDescription {
             nameLabel.text = name
-            bountyLabel.text = "\(bounty)"
+            descriptionLabel.text = description
         }
     }
     @IBAction func closeController(_ sender: Any) {
