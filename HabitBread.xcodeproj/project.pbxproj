@@ -15,6 +15,7 @@
 		E17E1114259E606B00957F65 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1113259E606B00957F65 /* SettingsNavigationController.swift */; };
 		E17E111E259ED8D500957F65 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E111D259ED8D500957F65 /* User.swift */; };
 		E17E1121259EDC0E00957F65 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1120259EDC0E00957F65 /* UserViewController.swift */; };
+		E17E1126259EFE9100957F65 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1125259EFE9100957F65 /* Bread.swift */; };
 		E1CA208F2598415300979696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA208E2598415300979696 /* AppDelegate.swift */; };
 		E1CA20912598415300979696 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20902598415300979696 /* SceneDelegate.swift */; };
 		E1CA20962598415300979696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1CA20942598415300979696 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		E17E1113259E606B00957F65 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		E17E111D259ED8D500957F65 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E17E1120259EDC0E00957F65 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		E17E1125259EFE9100957F65 /* Bread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
 		E1CA208B2598415300979696 /* HabitBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CA208E2598415300979696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CA20902598415300979696 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				E1CA20B3259880AB00979696 /* Habit.swift */,
 				E17E1105259C9DF300957F65 /* Rank.swift */,
 				E17E111D259ED8D500957F65 /* User.swift */,
+				E17E1125259EFE9100957F65 /* Bread.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				E17E1106259C9DF300957F65 /* Rank.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,
 				E1CA20D6259B0AB800979696 /* SettingsViewController.swift in Sources */,
+				E17E1126259EFE9100957F65 /* Bread.swift in Sources */,
 				E1CA20A4259841DF00979696 /* Const.swift in Sources */,
 				E1CA20EB259B83B400979696 /* Color.swift in Sources */,
 				E1CA208F2598415300979696 /* AppDelegate.swift in Sources */,

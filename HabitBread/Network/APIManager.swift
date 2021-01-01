@@ -77,4 +77,17 @@ class APIManager {
             }
         })
     }
+    
+    func getItem(completionHandler: @escaping (Result<[BreadResponse], Error>) -> Void) {
+        self.request = AF.request("\(Config.baseURL)/items", headers: Config.baseHeaders)
+        self.request?.responseDecodable(completionHandler: { (response:
+            DataResponse<[BreadResponse], AFError>) in
+            switch response.result {
+            case .success(let response):
+                completionHandler(.success(response))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        })
+    }
 }
