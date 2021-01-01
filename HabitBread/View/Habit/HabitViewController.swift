@@ -16,7 +16,7 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var habitTableView: UITableView!
     @IBOutlet weak var commentTextView: UILabel!
     
-    private var handler: ((Result<HabitResponse, Error>) -> Void)!
+    private var handler: ((Result<HabitListResponse, Error>) -> Void)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +89,7 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
         performSegue(withIdentifier: "showDetail", sender: indexPath.section)
     }
     
-    func updateUI(response: HabitResponse) {
+    func updateUI(response: HabitListResponse) {
         DispatchQueue.main.async {
             self.commentTextView.text = response.comment
             self.habits = response.habits

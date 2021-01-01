@@ -9,21 +9,6 @@ import UIKit
 
 class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // MVVM
-    
-    // Model
-    // 랭킹
-    
-    // View
-    // - listCell
-    // - listCell 에 필요한 정보를 ViewModel한테 받아온다
-    // > listCell은 viewModel로부터 받은 정보로 ViewUpdate를 한다.
-    
-    // ViewModel
-    // - RankingViewModel만들고, 뷰 레이어에서 필요한 메서드 만들기
-    // 모델을 가지고 있어야 함 .. Rank들
-    
-    
     var users: [RankUser] = [RankUser(userId: 1, userName: "User", exp: 3, achievement: 0, rank: "3")]
     private var handler: ((Result<Rank, Error>) -> Void)!
 

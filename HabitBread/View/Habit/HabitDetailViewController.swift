@@ -8,34 +8,44 @@ import UIKit
 
 class HabitDetailViewController: UIViewController {
     
-    // Model
-    // 랭킹
-    
-    // View
-    // - nameLabel, Description라벨
-    // - listCell 에 필요한 정보를 ViewModel한테 받아온다
-    // > listCell은 viewModel로부터 받은 정보로 ViewUpdate를 한다.
-    
-    // ViewModel
-    // - DetailViewModel 만들고, 뷰 레이어에서 필요한 메서드 만들기
-    // 모델을 가지고 있어야 함 .. Habit디테일로 떨어지는 값
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    private var resultHandler: ((Result<HabitDetailResponse, Error>)-> Void)!
     var habit: Habit?
+    var detailHabit: HabitDetail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        resultHandler = { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                self.updateUI(response: response)
+            case .failure(let error):
+                print("Error", error.localizedDescription)
+            }
+        }
+        APIManager.shared.getHabit(habitId: habit!.habitId, year: 2020, month: 4, completionHandler: resultHandler)
     }
     
-    private func updateUI() {
-        if let habit = self.habit {
-            nameLabel.text = habit.title
-            descriptionLabel.text = habit.description
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetail" {
+//
+//        }
+//    }
+    
+    private func updateUI(response: HabitDetailResponse) {
+        DispatchQueue.main.async {
+            self.nameLabel.text = response.habit.title
+            self.descriptionLabel.text = response.habit.description
         }
     }
+    
+    
+//    @IBAction func showModification(_ sender: Any) {
+//        performSegue(withIdentifier: "showModification", sender: nil)
+//    }
+    
     @IBAction func closeController(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
