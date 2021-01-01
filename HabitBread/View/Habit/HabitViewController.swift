@@ -9,7 +9,7 @@ import UIKit
 
 class HabitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var habits: [Habit]? = [Habit(habitId: 0, title: "Habit", description: "Description", dayOfWeek: "0000000", commitHistory: [])]
+    var habits: [Habit]? = [Habit(habitId: 0, title: "Habit", description: "Description", dayOfWeek: "0000000",percent: 0, commitHistory: [])]
     let cellReuseIdentifier = "habitCell"
     let cellSpacingHeight: CGFloat = 10
       
@@ -68,9 +68,10 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard let cell = (self.habitTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? HabitListViewCell) else { return UITableViewCell() }
           
         // note that indexPath.section is used rather than indexPath.row
-        let habit = habits?[indexPath.section]
-        cell.nameLabel?.text = habit?.title
-        cell.descriptionLabel.text = habit?.description
+        let habit = (habits?[indexPath.section])!
+        cell.nameLabel?.text = habit.title
+        cell.descriptionLabel.text = habit.description
+        cell.percentageLabel.text = "\(habit.percent)%"
         
         cell.backgroundColor = UIColor.clear
         cell.layer.borderWidth = 1

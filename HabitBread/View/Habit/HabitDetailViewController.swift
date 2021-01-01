@@ -27,7 +27,6 @@ class HabitDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Loaded \(habit?.title)")
         updateUI()
     }
     

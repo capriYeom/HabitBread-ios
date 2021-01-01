@@ -12,6 +12,7 @@ struct Habit: Decodable {
     let title: String
     let description: String?
     let dayOfWeek: String
+    let percent: Int
     let commitHistory: [History]
 }
 
