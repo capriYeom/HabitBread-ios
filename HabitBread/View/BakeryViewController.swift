@@ -60,6 +60,7 @@ class BakeryViewController: UIViewController, UICollectionViewDelegate, UICollec
                 print("Error", error.localizedDescription)
             }
         }
+        APIManager.shared.getItem(completionHandler: handler)
     }
     
     private func updateUI(response: [BreadResponse]) {

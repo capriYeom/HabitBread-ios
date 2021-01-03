@@ -6,6 +6,7 @@ target 'HabitBread' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.2'
+  pod 'GoogleSignIn'
   # Pods for HabitBread
 
 end
