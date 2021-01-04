@@ -643,7 +643,7 @@
                     </view>
                     <connections>
                         <outlet property="googleLoginButton" destination="4He-AD-l8Y" id="Zu2-e2-IvM"/>
-                        <segue destination="F3h-J7-FMa" kind="presentation" modalPresentationStyle="fullScreen" id="mIV-T5-cox"/>
+                        <segue destination="F3h-J7-FMa" kind="presentation" identifier="Login" modalPresentationStyle="fullScreen" id="mIV-T5-cox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycS-nU-2Ab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

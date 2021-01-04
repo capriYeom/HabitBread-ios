@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>HabitBread</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,7 +27,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.721656071466-r14d47j4e5r2q9mb7binkahur27aaumc</string>
+				<string>com.googleusercontent.apps.191839451290-4kkn9ttisgklp7fc5713pbqesi6u4ghe</string>
 			</array>
 		</dict>
 	</array>

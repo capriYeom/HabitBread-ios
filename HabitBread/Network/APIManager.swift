@@ -91,5 +91,16 @@ class APIManager {
         })
     }
     
+    func authenticateGoogle(idToken: String, completionHandler: @escaping (Result<GoogleOAuthResponse, Error>) -> Void) {
+        self.request = AF.request("\(Config.baseURL)/oauth/google/verify", method: .post, parameters: ["idToken": idToken])
+        self.request?.responseDecodable(completionHandler: { (response: DataResponse<GoogleOAuthResponse, AFError>) in
+            switch response.result {
+            case .success(let response):
+                completionHandler(.success(response))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        })
+    }
     
 }

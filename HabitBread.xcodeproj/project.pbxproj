@@ -16,7 +16,7 @@
 		E17E111E259ED8D500957F65 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E111D259ED8D500957F65 /* User.swift */; };
 		E17E1121259EDC0E00957F65 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1120259EDC0E00957F65 /* UserViewController.swift */; };
 		E17E1126259EFE9100957F65 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1125259EFE9100957F65 /* Bread.swift */; };
-		E184FA3325A23ECC00D877D1 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = E184FA3225A23ECC00D877D1 /* credentials.plist */; };
+		E184FA5825A2562F00D877D1 /* GoogleOAuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184FA5725A2562F00D877D1 /* GoogleOAuthResponse.swift */; };
 		E1CA208F2598415300979696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA208E2598415300979696 /* AppDelegate.swift */; };
 		E1CA20912598415300979696 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA20902598415300979696 /* SceneDelegate.swift */; };
 		E1CA20962598415300979696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1CA20942598415300979696 /* Main.storyboard */; };
@@ -51,7 +51,7 @@
 		E17E111D259ED8D500957F65 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E17E1120259EDC0E00957F65 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E17E1125259EFE9100957F65 /* Bread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
-		E184FA3225A23ECC00D877D1 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		E184FA5725A2562F00D877D1 /* GoogleOAuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleOAuthResponse.swift; sourceTree = "<group>"; };
 		E1CA208B2598415300979696 /* HabitBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CA208E2598415300979696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CA20902598415300979696 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				E1CA20972598415600979696 /* Assets.xcassets */,
 				E1CA20992598415600979696 /* LaunchScreen.storyboard */,
 				E1CA209C2598415600979696 /* Info.plist */,
-				E184FA3225A23ECC00D877D1 /* credentials.plist */,
 				E1CA20A3259841DF00979696 /* Const.swift */,
 			);
 			path = HabitBread;
@@ -182,6 +181,7 @@
 				E17E1105259C9DF300957F65 /* Rank.swift */,
 				E17E111D259ED8D500957F65 /* User.swift */,
 				E17E1125259EFE9100957F65 /* Bread.swift */,
+				E184FA5725A2562F00D877D1 /* GoogleOAuthResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CA209B2598415600979696 /* LaunchScreen.storyboard in Resources */,
-				E184FA3325A23ECC00D877D1 /* credentials.plist in Resources */,
 				E1CA20982598415600979696 /* Assets.xcassets in Resources */,
 				E1CA20962598415300979696 /* Main.storyboard in Resources */,
 			);
@@ -378,6 +377,7 @@
 				E1CA20BE259A154100979696 /* HabitDetailViewController.swift in Sources */,
 				E1CA20912598415300979696 /* SceneDelegate.swift in Sources */,
 				E17E1103259C9D7300957F65 /* Config.swift in Sources */,
+				E184FA5825A2562F00D877D1 /* GoogleOAuthResponse.swift in Sources */,
 				E17E111E259ED8D500957F65 /* User.swift in Sources */,
 				E17E1121259EDC0E00957F65 /* UserViewController.swift in Sources */,
 				E1CA20EF259B8BB500979696 /* RankingViewController.swift in Sources */,

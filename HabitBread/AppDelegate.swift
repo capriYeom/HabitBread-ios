@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         // Initialize Sign In with Firebase
         
-        GIDSignIn.sharedInstance().clientID = "com.googleusercontent.apps.721656071466-r14d47j4e5r2q9mb7binkahur27aaumc"
+        GIDSignIn.sharedInstance().clientID = "191839451290-4kkn9ttisgklp7fc5713pbqesi6u4ghe.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        if (GIDSignIn.sharedInstance()?.hasPreviousSignIn() != nil) {
+            GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        }
         return true
     }
 
@@ -45,10 +48,10 @@ extension AppDelegate: GIDSignInDelegate{
     // MARK: GOOGLE LOGIN
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error != nil {
-            fatalError(error.localizedDescription)
+            print(error.localizedDescription)
+            return
         }
         NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
-       
     }
 }
 

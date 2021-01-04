@@ -9,7 +9,7 @@ import GoogleSignIn
 
 class SignInViewController : UIViewController {
     
-    
+    private var googleHandler: ((Result<GoogleOAuthResponse, Error>) -> Void)!
     @IBOutlet weak var googleLoginButton: GIDSignInButton!
     
     override func viewDidLoad() {
@@ -25,6 +25,16 @@ class SignInViewController : UIViewController {
     
     
     @objc private func authenticateToServer(_ notification: Notification) {
-        
+        googleHandler = {  [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                Config.accessToken = response.accessToken
+                self.performSegue(withIdentifier: "Login", sender: nil)
+            case .failure(let error):
+                print("Error", error.localizedDescription)
+            }
+        }
+        APIManager.shared.authenticateGoogle(idToken: (GIDSignIn.sharedInstance()?.currentUser.authentication.idToken)!, completionHandler: googleHandler)
     }
 }

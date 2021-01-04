@@ -8,8 +8,9 @@
 import Alamofire
 
 struct Config {
+    static var accessToken: String = "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTU5MTA4ODk2Nn0.3OVVxz3YJGqd8kAOCRby8ztbFp3TqpZkG5Pwwlr6Azeji3lZU0_-l8YSWO8dIrOy"
     static let baseURL = "http://dev.habitbread.com"
     static let baseHeaders: HTTPHeaders = [
-        "Authorization": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTU5MTA4ODk2Nn0.3OVVxz3YJGqd8kAOCRby8ztbFp3TqpZkG5Pwwlr6Azeji3lZU0_-l8YSWO8dIrOy"
+        "Authorization": "Bearer \(accessToken)"
     ]
 }
