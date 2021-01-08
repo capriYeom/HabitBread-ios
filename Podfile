@@ -7,6 +7,8 @@ target 'HabitBread' do
 
   pod 'Alamofire', '~> 5.2'
   pod 'GoogleSignIn'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   # Pods for HabitBread
 
 end
