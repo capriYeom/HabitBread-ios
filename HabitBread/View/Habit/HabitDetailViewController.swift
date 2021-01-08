@@ -14,6 +14,14 @@ class HabitDetailViewController: UIViewController {
     var habit: Habit?
     var detailHabit: HabitDetail?
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showModification" {
+            let vc = segue.destination as? ModificationViewController
+            
+            vc?.habit = self.habit
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultHandler = { [weak self] result in

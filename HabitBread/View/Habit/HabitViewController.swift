@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HabitViewController: UIViewController {
     
     var habits: [Habit]? = [Habit(habitId: 0, title: "Habit", description: "Description", dayOfWeek: "0000000",percent: 0, commitHistory: [])]
     let cellReuseIdentifier = "habitCell"
@@ -32,6 +32,7 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
         APIManager.shared.getAllHabits(completionHandler: handler)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let vc = segue.destination as? HabitDetailViewController
@@ -44,6 +45,17 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
       
     // There is just one row in every section
+    
+    func updateUI(response: HabitListResponse) {
+        DispatchQueue.main.async {
+            self.commentTextView.text = response.comment
+            self.habits = response.habits
+            self.habitTableView.reloadData()
+        }
+    }
+  }
+
+extension HabitViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -88,16 +100,7 @@ class HabitViewController: UIViewController, UITableViewDataSource, UITableViewD
         print("You tapped section number \(indexPath.section).")
         performSegue(withIdentifier: "showDetail", sender: indexPath.section)
     }
-    
-    func updateUI(response: HabitListResponse) {
-        DispatchQueue.main.async {
-            self.commentTextView.text = response.comment
-            self.habits = response.habits
-            self.habitTableView.reloadData()
-        }
-    }
-  }
-
+}
 
 class HabitListViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!

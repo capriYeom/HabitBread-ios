@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E737C8BF689FDC7BB7167D4 /* Pods_HabitBread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D64DC0BA0DA267347117EB6 /* Pods_HabitBread.framework */; };
+		E11C9BF525A8CF1F009846E8 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C9BF425A8CF1F009846E8 /* RankingViewModel.swift */; };
+		E11C9BF825A8D3F6009846E8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C9BF725A8D3F6009846E8 /* MainTabBarController.swift */; };
 		E17E10F8259C7AC900957F65 /* BakeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10F7259C7AC900957F65 /* BakeryViewController.swift */; };
 		E17E10FB259C99A100957F65 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10FA259C99A100957F65 /* APIManager.swift */; };
 		E17E1103259C9D7300957F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1102259C9D7300957F65 /* Config.swift */; };
@@ -43,6 +45,8 @@
 		6D64DC0BA0DA267347117EB6 /* Pods_HabitBread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitBread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EEBE0197BDEB668D1333F3 /* Pods-HabitBread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitBread.release.xcconfig"; path = "Target Support Files/Pods-HabitBread/Pods-HabitBread.release.xcconfig"; sourceTree = "<group>"; };
 		A8521FCF6859499734104F19 /* Pods-HabitBread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitBread.debug.xcconfig"; path = "Target Support Files/Pods-HabitBread/Pods-HabitBread.debug.xcconfig"; sourceTree = "<group>"; };
+		E11C9BF425A8CF1F009846E8 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		E11C9BF725A8D3F6009846E8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E17E10F7259C7AC900957F65 /* BakeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryViewController.swift; sourceTree = "<group>"; };
 		E17E10FA259C99A100957F65 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E17E1102259C9D7300957F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				E1CA20992598415600979696 /* LaunchScreen.storyboard */,
 				E1CA209C2598415600979696 /* Info.plist */,
 				E1CA20A3259841DF00979696 /* Const.swift */,
+				E11C9BF425A8CF1F009846E8 /* RankingViewModel.swift */,
 			);
 			path = HabitBread;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				E1CA20EE259B8BB500979696 /* RankingViewController.swift */,
 				E17E10F7259C7AC900957F65 /* BakeryViewController.swift */,
 				E17E1120259EDC0E00957F65 /* UserViewController.swift */,
+				E11C9BF725A8D3F6009846E8 /* MainTabBarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,10 +372,12 @@
 				E1CA208F2598415300979696 /* AppDelegate.swift in Sources */,
 				E1CA20B025987A6100979696 /* HabitViewController.swift in Sources */,
 				E1CA20D2259B094000979696 /* CreationViewController.swift in Sources */,
+				E11C9BF825A8D3F6009846E8 /* MainTabBarController.swift in Sources */,
 				E1CA20DA259B0B2100979696 /* ProfileNavigationController.swift in Sources */,
 				E1CA20AC2598783100979696 /* SignInViewController.swift in Sources */,
 				E1CA20E4259B42A700979696 /* HelpTableController.swift in Sources */,
 				E1CA20DD259B279800979696 /* NotificationViewController.swift in Sources */,
+				E11C9BF525A8CF1F009846E8 /* RankingViewModel.swift in Sources */,
 				E17E10FB259C99A100957F65 /* APIManager.swift in Sources */,
 				E1CA20E1259B36E400979696 /* InvitationTableViewController.swift in Sources */,
 				E1CA20E7259B46F600979696 /* InformationTableViewController.swift in Sources */,
