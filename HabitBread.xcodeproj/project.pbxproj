@@ -10,6 +10,7 @@
 		0E737C8BF689FDC7BB7167D4 /* Pods_HabitBread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D64DC0BA0DA267347117EB6 /* Pods_HabitBread.framework */; };
 		E11C9BF525A8CF1F009846E8 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C9BF425A8CF1F009846E8 /* RankingViewModel.swift */; };
 		E11C9BF825A8D3F6009846E8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C9BF725A8D3F6009846E8 /* MainTabBarController.swift */; };
+		E11C9C3825A97C6A009846E8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C9C3725A97C6A009846E8 /* String.swift */; };
 		E17E10F8259C7AC900957F65 /* BakeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10F7259C7AC900957F65 /* BakeryViewController.swift */; };
 		E17E10FB259C99A100957F65 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E10FA259C99A100957F65 /* APIManager.swift */; };
 		E17E1103259C9D7300957F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E1102259C9D7300957F65 /* Config.swift */; };
@@ -47,6 +48,7 @@
 		A8521FCF6859499734104F19 /* Pods-HabitBread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitBread.debug.xcconfig"; path = "Target Support Files/Pods-HabitBread/Pods-HabitBread.debug.xcconfig"; sourceTree = "<group>"; };
 		E11C9BF425A8CF1F009846E8 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		E11C9BF725A8D3F6009846E8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E11C9C3725A97C6A009846E8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E17E10F7259C7AC900957F65 /* BakeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryViewController.swift; sourceTree = "<group>"; };
 		E17E10FA259C99A100957F65 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E17E1102259C9D7300957F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CA20EA259B83B400979696 /* Color.swift */,
+				E11C9C3725A97C6A009846E8 /* String.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11C9C3825A97C6A009846E8 /* String.swift in Sources */,
 				E1CA20CC259B04FC00979696 /* ModificationViewController.swift in Sources */,
 				E17E1106259C9DF300957F65 /* Rank.swift in Sources */,
 				E1CA20B4259880AB00979696 /* Habit.swift in Sources */,

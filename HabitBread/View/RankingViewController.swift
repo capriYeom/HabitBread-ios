@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RankingViewController: UIViewController {
     
     var users: [RankUser] = [RankUser(userId: 1, userName: "User", exp: 3, achievement: 0, rank: "3")]
     private var handler: ((Result<Rank, Error>) -> Void)!
@@ -19,7 +19,38 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var myPercentageLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+      
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        handler = { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let rank):
+                self.updateUI(rank: rank)
+            case .failure(let error):
+                print("Error", error.localizedDescription)
+            }
+        }
+        APIManager.shared.getRankings(completionHandler: handler)
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return users.count
+    }
+    
+    func updateUI(rank: Rank) {
+        DispatchQueue.main.async {
+            self.rankLabel.text = "당신은 \(rank.userTotalCount)명 중에 \(Int(rank.user.rank)!)등입니다."
+            print("userRank: \(Double(rank.userTotalCount)/Double(rank.user.rank)!)" )
+            let percent = 32
+            self.myPercentageLabel.text = "\(percent)%"
+            self.users = rank.rankings
+            self.rankingTableView.reloadData()
+        }
+    }
+}
+
+extension RankingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -40,24 +71,6 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
-      
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        handler = { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let rank):
-                self.updateUI(rank: rank)
-            case .failure(let error):
-                print("Error", error.localizedDescription)
-            }
-        }
-        APIManager.shared.getRankings(completionHandler: handler)
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return users.count
-    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight
@@ -74,17 +87,6 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.section).")
     }
-    
-    func updateUI(rank: Rank) {
-        DispatchQueue.main.async {
-            self.rankLabel.text = "당신은 \(rank.userTotalCount)명 중에 \(Int(rank.user.rank)!)등입니다."
-            print("userRank: \(Double(rank.userTotalCount)/Double(rank.user.rank)!)" )
-            let percent = 32
-            self.myPercentageLabel.text = "\(percent)%"
-            self.users = rank.rankings
-            self.rankingTableView.reloadData()
-        }
-    }
 }
 
 class UserTableViewCell: UITableViewCell{
@@ -92,5 +94,20 @@ class UserTableViewCell: UITableViewCell{
     @IBOutlet weak var rankNumlabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var expLabel: UILabel!
+    
+    func update(index: Int, rankUser: RankUser) {
+        rankLabel.text = rankUser.userName
+        expLabel.text = "\(rankUser.exp)"
+        rankNumlabel.text = "\(index+1)"
+        changeCellView(index: index+1)
+    }
+    
+    func changeCellView(index: Int) {
+        backgroundColor = UIColor.white
+        layer.borderWidth = 1
+        layer.borderColor = UIColor(rgb: 0xF5F4F1).cgColor
+        layer.cornerRadius = 12
+        clipsToBounds = true
+    }
 }
 

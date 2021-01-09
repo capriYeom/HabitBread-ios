@@ -9,7 +9,12 @@ import UIKit
 
 class HabitViewController: UIViewController {
     
+    enum SortType {
+        case ALL, MON, TUE, WED, THU, FRI, SAT, SUN
+    }
+    
     var habits: [Habit]? = [Habit(habitId: 0, title: "Habit", description: "Description", dayOfWeek: "0000000",percent: 0, commitHistory: [])]
+    var reusableHabits: [Habit]? = []
     let cellReuseIdentifier = "habitCell"
     let cellSpacingHeight: CGFloat = 10
       
@@ -32,6 +37,37 @@ class HabitViewController: UIViewController {
         APIManager.shared.getAllHabits(completionHandler: handler)
     }
     
+    @IBAction func seeAllHabits(_ sender: Any) {
+        sortHabitList(sortType: .ALL)
+    }
+    
+    @IBAction func seeMonday(_ sender: Any) {
+        sortHabitList(sortType: .MON)
+    }
+    
+    @IBAction func seeTuesday(_ sender: Any) {
+        sortHabitList(sortType: .TUE)
+    }
+    
+    @IBAction func seeWednesday(_ sender: Any) {
+        sortHabitList(sortType: .WED)
+    }
+    
+    @IBAction func seeThursday(_ sender: Any) {
+        sortHabitList(sortType: .THU)
+    }
+    
+    @IBAction func seeFriday(_ sender: Any) {
+        sortHabitList(sortType: .FRI)
+    }
+    
+    @IBAction func seeSaturday(_ sender: Any) {
+        sortHabitList(sortType: .SAT)
+    }
+    
+    @IBAction func seeSunday(_ sender: Any) {
+        sortHabitList(sortType: .SUN)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -44,12 +80,38 @@ class HabitViewController: UIViewController {
         }
     }
       
-    // There is just one row in every section
+    private func sortHabitList(sortType: SortType) {
+        let sortedHabitList: [Habit]?
+        switch sortType {
+        case .MON:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[0] == "1"}
+        case .TUE:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[1] == "1"}
+        case .WED:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[2] == "1"}
+        case .THU:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[3] == "1"}
+        case .FRI:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[4] == "1"}
+        case .SAT:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[5] == "1"}
+        case .SUN:
+            sortedHabitList = habits?.filter {$0.dayOfWeek[6] == "1"}
+        default:
+            sortedHabitList = habits
+        }
+        DispatchQueue.main.async {
+            self.reusableHabits = sortedHabitList
+            self.habitTableView.reloadData()
+        }
+    }
     
-    func updateUI(response: HabitListResponse) {
+    // There is just one row in every section
+    private func updateUI(response: HabitListResponse) {
         DispatchQueue.main.async {
             self.commentTextView.text = response.comment
             self.habits = response.habits
+            self.reusableHabits = self.habits
             self.habitTableView.reloadData()
         }
     }
@@ -61,7 +123,7 @@ extension HabitViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return habits?.count ?? 0
+        return reusableHabits?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -80,7 +142,7 @@ extension HabitViewController : UITableViewDataSource, UITableViewDelegate {
         guard let cell = (self.habitTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? HabitListViewCell) else { return UITableViewCell() }
           
         // note that indexPath.section is used rather than indexPath.row
-        let habit = (habits?[indexPath.section])!
+        let habit = (reusableHabits?[indexPath.section])!
         cell.nameLabel?.text = habit.title
         cell.descriptionLabel.text = habit.description
         cell.percentageLabel.text = "\(habit.percent)%"

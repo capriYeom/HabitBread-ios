@@ -41,36 +41,57 @@
                                         <rect key="frame" x="0.0" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="월"/>
+                                        <connections>
+                                            <action selector="seeMonday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2b2-DR-Gh3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-uw-Vvr">
                                         <rect key="frame" x="47.5" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="화"/>
+                                        <connections>
+                                            <action selector="seeTuesday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgK-eY-w25"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anI-du-tx7">
                                         <rect key="frame" x="95" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="수"/>
+                                        <connections>
+                                            <action selector="seeWednesday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7F-Fa-7bF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8y-Hu-xea">
                                         <rect key="frame" x="142.5" y="0.0" width="47" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="목"/>
+                                        <connections>
+                                            <action selector="seeThursday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRY-rp-J50"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-g5-4fT">
                                         <rect key="frame" x="189.5" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="금"/>
+                                        <connections>
+                                            <action selector="seeFriday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F75-oL-ziN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-HA-LgO">
                                         <rect key="frame" x="237" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="토"/>
+                                        <connections>
+                                            <action selector="seeSaturday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OG-Bh-YDH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rce-X7-PnL">
                                         <rect key="frame" x="284.5" y="0.0" width="47.5" height="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="일"/>
+                                        <connections>
+                                            <action selector="seeSunday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tkg-QT-Qjr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,13 +132,18 @@
                                         <rect key="frame" x="14.5" y="5" width="52" height="30"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="모아보기"/>
+                                        <connections>
+                                            <action selector="seeAllHabits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxC-C0-oto"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="wma-93-Ewb" firstAttribute="centerX" secondItem="Hh9-mo-msh" secondAttribute="centerX" id="9QB-Ka-Cmy"/>
+                                    <constraint firstItem="wma-93-Ewb" firstAttribute="height" secondItem="Hh9-mo-msh" secondAttribute="height" multiplier="0.75" id="GOR-GI-YfO"/>
                                     <constraint firstAttribute="width" constant="81" id="bYH-sc-Mdk"/>
                                     <constraint firstItem="wma-93-Ewb" firstAttribute="centerY" secondItem="Hh9-mo-msh" secondAttribute="centerY" id="eON-MV-Ioy"/>
+                                    <constraint firstItem="wma-93-Ewb" firstAttribute="width" secondItem="Hh9-mo-msh" secondAttribute="width" multiplier="0.641975" id="kea-AY-d3e"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-gq-p7z">
